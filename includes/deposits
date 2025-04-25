@@ -1,0 +1,454 @@
+<h1 id='c4da615673'>Депозиты</h1><h2 id='b3d4caadb3'>История депозитов</h2>
+<blockquote>
+<p>Получить список депозитов:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="s2">"https://{stage_address}/api/v2/deposits"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36931</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rub"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fiat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500000.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Наличные касса Москва: "</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-23T10:10:23+03:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-23T10:10:36+03:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36354</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rub"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fiat"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61000.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"код пополнения: TGJ0C5IYM62PBDR8HAQO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-05T23:13:01+03:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-05T23:13:01+03:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36060</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdt"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coin"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"640.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x88178478a5df7c3dd0a53dddf70fc0c092f5fc4b0fff6f3058381f99c7e92abe"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"block_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9606704</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">23212</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xda36a74ca59f8816dc330fae1074223aa89833a1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:49:13+03:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:50:05+03:00"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Получение списка депозитов пользователя.</p>
+
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposits</code></p>
+<h3 id='6744ad4c7a'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>нет</td>
+<td>Код валюты, например <strong>aed</strong>, <strong>aff</strong>, <strong>btc</strong>, <strong>btc-bbtc</strong>, <strong>btc-bsc</strong>, <strong>dai</strong>, <strong>dai-bsc</strong>, <strong>eth</strong>, <strong>eth-bsc</strong>, <strong>rub</strong>, <strong>uah</strong>, <strong>usd</strong>, <strong>usdt</strong>, <strong>usdt-bsc</strong>, <strong>usdt-omni</strong>, <strong>usdt-tron</strong></td>
+</tr>
+<tr>
+<td><strong>state</strong></td>
+<td>нет</td>
+<td>Статус. Может быть <strong>submitted</strong>, <strong>rejected</strong>, <strong>accepted</strong>, <strong>suspected</strong>, <strong>processing</strong>, <strong>pending</strong>, <strong>succeed</strong>, <strong>canceled</strong>, <strong>confirming</strong>, <strong>fraudulent</strong></td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>нет</td>
+<td>Количество результатов в ответе, по умолчанию 250</td>
+</tr>
+<tr>
+<td><strong>offset</strong></td>
+<td>нет</td>
+<td>С какой записи по номеру начинать</td>
+</tr>
+<tr>
+<td><strong>start_time</strong></td>
+<td>нет</td>
+<td>С какой записи по времени создания начинать, по умолчанию - без ограничений</td>
+</tr>
+<tr>
+<td><strong>end_time</strong></td>
+<td>нет</td>
+<td>По какую запись возвращать результат. По умолчанию - текущий таймстэмп</td>
+</tr>
+</tbody></table>
+<h3 id='bd6108841b'>Возвращаемые значения</h3>
+<p>Обратите внимание, поля в возвращаемом списке различаются для фиатных и крипто депозитов!</p>
+
+<p>Для крипты добавляются поля <strong>txid</strong>, <strong>block_number</strong> и <strong>confirmations</strong>.</p>
+<h2 id='3e577c2287'>Информация о депозите</h2>
+<blockquote>
+<p>Получить детали депозита по deposit_id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="s2">"https://{stage_address}/api/v2/deposit/{deposit_id}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36060</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdt"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"640.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x88178478a5df7c3dd0a53dddf70fc0c092f5fc4b0fff6f3058381f99c7e92abe"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"block_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9606704</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">23212</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xda36a74ca59f8816dc330fae1074223aa89833a1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:49:13+03:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:50:05+03:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='id'>Получение детальной информации о депозите по ID</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-2'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit/{deposit_id}</code></p>
+<h3 id='6744ad4c7a-2'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>deposit_id</strong></td>
+<td>да</td>
+<td>ID депозита полученное при его создании / из истории депозитов</td>
+</tr>
+</tbody></table>
+<h3 id='bd6108841b-2'>Возвращаемые значения</h3>
+<p>Обратите внимание, поля в возвращаемом списке различаются для фиатных и крипто депозитов!</p>
+
+<p>Для крипты добавляются поля <strong>txid</strong>, <strong>block_number</strong> и <strong>confirmations</strong>.</p>
+
+<blockquote>
+<p>Получить детали депозита по txid:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="s2">"https://{stage_address}/api/v2/deposit?txid={txid}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36060</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdt"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"640.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x88178478a5df7c3dd0a53dddf70fc0c092f5fc4b0fff6f3058381f99c7e92abe"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"block_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9606704</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">23212</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xda36a74ca59f8816dc330fae1074223aa89833a1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:49:13+03:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-04T22:50:05+03:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='txid'>Получение детальной информации о депозите по txid транзакции</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-3'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit</code></p>
+<h3 id='6744ad4c7a-3'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>txid</strong></td>
+<td>да</td>
+<td>txid транзакции в блокчейне</td>
+</tr>
+</tbody></table>
+<h2 id='5876f71674'>Создание депозита</h2>
+<blockquote>
+<p>Создать заявку на депозит:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {JWT}'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="nt">-d</span> <span class="s1">'currency={currency_id}&amp;amount={amount}&amp;gateway_type_id={gateway_type_id}'</span> <span class="s1">'https://{stage_address}/api/v2/deposits/create'</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36960</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rub"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fiat"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100000.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"submitted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Наличные касса Москва: "</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-08T20:33:58+03:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='e3f9070304'>Создание заявки на внос средств.</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-4'>HTTP Request</h4>
+<p><code>POST https://{stage_address}/api/v2/deposits/create</code></p>
+<h3 id='6744ad4c7a-4'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>да</td>
+<td>Код фиатной валюты (rub)</td>
+</tr>
+<tr>
+<td><strong>amount</strong></td>
+<td>да</td>
+<td>Размер депозита</td>
+</tr>
+<tr>
+<td><a href='#92dd9b64ca'>gateway_type_id</a></td>
+<td>да</td>
+<td>ID выбранного метода пополнения</td>
+</tr>
+<tr>
+<td><strong>data</strong></td>
+<td>нет</td>
+<td>JSON поле с дополнительной информацией о депозите, необходимость и формат поля зависят от выбранного метода пополнения</td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td>нет</td>
+<td>Информация об адресе депозита, необходимость и формат поля зависят от выбранного метода пополнения</td>
+</tr>
+</tbody></table>
+<h2 id='6736666fad'>Адрес для депозита крипты</h2>
+<blockquote>
+<p>Получить адрес для депозита крипты:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="s2">"https://{stage_address}/api/v2/deposit_address?currency={currency_id}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdt-omni"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3DVQ9WL2rTjBm1q7UHwWAQdNCKveFRJCYk"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='41b3c4e012'>Получение актуального адреса для депозита крипты</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-5'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit_address</code></p>
+<h3 id='6744ad4c7a-5'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>да</td>
+<td>ID валюты для депозита</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Получить дополнительный адрес для депозита крипты:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="nt">-d</span> <span class="s2">"currency=btc"</span> <span class="s2">"https://{stage_address}/api/v2/deposit_address"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6789</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='0ee67631ae'>Получение дополнительного адреса для депозита крипты</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-6'>HTTP Request</h4>
+<p><code>POST https://{stage_address}/api/v2/deposit_address</code></p>
+<h3 id='6744ad4c7a-6'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>да</td>
+<td>ID валюты для депозита</td>
+</tr>
+</tbody></table>
+<h3 id='bd6108841b-3'>Возвращаемые значения</h3>
+<p>Обратите внимание, значение адреса в ответе может быть null! 
+Это нормальная ситуация, так как создание нового адреса занимает время, и в таком случае фактический адрес должен быть получен отдельно,
+запросом <code>/deposit_address/details</code>.</p>
+
+<blockquote>
+<p>Получить детальную информации о конкретном депозит адресе</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="nt">-d</span> <span class="s2">"currency=btc"</span> <span class="s2">"https://{stage_address}/api/v2/deposit_address/details?id={id}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6789</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"blockchain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3Qtj2uSv2AV7S86iTzJW1RwCoNKzGrJFyJ"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='0ec97bac14'>Получение детальной информации о конкретном депозит адресе</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-7'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit_address/details</code></p>
+<h3 id='6744ad4c7a-7'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>да</td>
+<td>ID депозит адреса</td>
+</tr>
+</tbody></table>
+<h3 id='bd6108841b-4'>Возвращаемые значения</h3>
+<p>Обратите внимание, значение адреса в ответе может быть null! 
+Это нормальная ситуация, так как создание нового адреса занимает время, и в таком случае запрос необходимо повторить позже.</p>
+
+<p>Кроме того, в ответе будет указан не код валюты, но код блокчейна, так как адреса валидны для всех валют которые поддерживаются на этом блокчейне. </p>
+<h3 id='9b6a512f8e'>Мульти-блокчейн валюты</h3>
+<p>Для валют которые используют больше чем один блокчейн, по умолчанию возвращается адрес для &quot;основного&quot; блокчейна.
+При необходимости получить адрес из другого блокчейна, он указывается через дефис, например usdt-omni.</p>
+
+<blockquote>
+<p>Получить детальную информации о конкретном депозит адресе</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="nt">-d</span> <span class="s2">"currency=btc"</span> <span class="s2">"https://{stage_address}/api/v2/deposit_address/{id}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6789</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"blockchain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3Qtj2uSv2AV7S86iTzJW1RwCoNKzGrJFyJ"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='0ec97bac14-2'>Получение детальной информации о конкретном депозит адресе</h3>
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-8'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit_address/{id}</code></p>
+<h3 id='6744ad4c7a-8'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>да</td>
+<td>ID депозит адреса</td>
+</tr>
+</tbody></table>
+<h3 id='bd6108841b-5'>Возвращаемые значения</h3>
+<p>Обратите внимание, значение адреса в ответе может быть null! 
+Это нормальная ситуация, так как создание нового адреса занимает время, и в таком случае запрос необходимо повторить позже.</p>
+
+<p>Кроме того, в ответе будет указан не код валюты, но код блокчейна, так как адреса валидны для всех валют которые поддерживаются на этом блокчейне. </p>
+<h3 id='9b6a512f8e-2'>Мульти-блокчейн валюты</h3>
+<p>Для валют которые используют больше чем один блокчейн, по умолчанию возвращается адрес для &quot;основного&quot; блокчейна.
+При необходимости получить адрес из другого блокчейна, он указывается через дефис, например usdt-omni.</p>
+
+<blockquote>
+<p>Получить писок депозит-адресов:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {JWT}"</span> <span class="nt">-d</span> <span class="s2">"currency=btc"</span> <span class="s2">"https://{stage_address}/api/v2/deposit_address/list"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2813</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3KVWYcm3Avkj8cDzmt2TAVYwGei48awQyY"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"blockchain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"btc"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-16T15:56:54.000+03:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19610</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"blockchain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"btc"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-13T17:17:56.779+03:00"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='2a1dc429b6'>Получение списка всех депозит-адресов пользователя</h3>
+<p>Запрос позволяет получить все депозит-адреса авторизованного пользователя для определенной валюты или блокчейна. Обязательно указать только один из двух параметров.</p>
+
+<ul>
+<li>требуемый уровень доступа: <strong>read-only</strong></li>
+</ul>
+<h4 id='http-request-9'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/deposit_address/list</code></p>
+<h3 id='6744ad4c7a-9'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>blockchain</strong></td>
+<td>1/2</td>
+<td>Код блокчейна, например <strong>btc</strong> или <strong>omni-usdt</strong> или <strong>ethereum</strong></td>
+</tr>
+<tr>
+<td><strong>currency</strong></td>
+<td>1/2</td>
+<td>Код валюты, например <strong>btc</strong> или <strong>DAI-BSC</strong> или <strong>usdt-tron</strong> (можно использовать верхний регистр)</td>
+</tr>
+</tbody></table>

@@ -1,0 +1,141 @@
+<h1 id='market-data'>Market data</h1><h2 id='f00f8079b3'>Сделки</h2>
+<blockquote>
+<p>Получить список сделок по рынку</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://{stage_address}/api/v2/trades?market={market}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">34786</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68.8"</span><span class="p">,</span><span class="w">      </span><span class="err">//</span><span class="w"> </span><span class="err">цена</span><span class="w">
+    </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"757.51"</span><span class="p">,</span><span class="w">   </span><span class="err">//</span><span class="w"> </span><span class="err">сумма</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">базовой</span><span class="w"> </span><span class="err">валюте</span><span class="w">
+    </span><span class="nl">"funds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52116.84"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">сумма</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">валюте</span><span class="w"> </span><span class="err">котировки</span><span class="w">
+    </span><span class="nl">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdtrub"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">рынок</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-25T12:54:22+03:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">34785</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68.6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"85.06"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"funds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5834.93"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usdtrub"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T19:31:41+03:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Запрос возвращает историю сделок по выбранному рынку</p>
+
+<ul>
+<li>требуемый уровень доступа: <strong>публичный</strong></li>
+</ul>
+<h4 id='http-request'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/trades</code></p>
+<h3 id='6744ad4c7a'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>market</strong></td>
+<td>да</td>
+<td>ID рынка</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>нет</td>
+<td>Количество записей в выборке, по умолчанию 50. Максимум - 1000</td>
+</tr>
+<tr>
+<td><strong>timestamp</strong></td>
+<td>нет</td>
+<td>Время по которое получить выборку, формат - unix timestamp</td>
+</tr>
+<tr>
+<td><strong>from</strong></td>
+<td>нет</td>
+<td>ID сделки начиная с которой (но не включая) получить выборку</td>
+</tr>
+<tr>
+<td><strong>to</strong></td>
+<td>нет</td>
+<td>ID сделки по которую (но не включая) получить выборку</td>
+</tr>
+<tr>
+<td><strong>order_by</strong></td>
+<td>нет</td>
+<td>Направление сортировки, <strong>asc</strong> / <strong>desc</strong>. По умолчанию <strong>desc</strong>, последняя сделка сверху</td>
+</tr>
+</tbody></table>
+<h2 id='be11d71726'>Заявки</h2>
+<blockquote>
+<p>Получить список заявок для рынка</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://{stage_address}/api/v2/depth?market={market}"</span>
+</code></pre></div>
+<blockquote>
+<p>Пример ответа:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1648047486</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"asks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"156612.04"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.23625259"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"37000.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.008"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="w">      </span><span class="err">//</span><span class="w"> </span><span class="err">тип</span><span class="w"> </span><span class="err">цены:</span><span class="w"> </span><span class="err">factor</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">limit</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"157006.78"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00003591"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.64"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.011"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"factor"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"bids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"153590.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.04143581"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6364.13"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-0.011"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"factor"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"152074.67"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.26302868"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40000.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"factor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-0.021"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Запрос возвращает состояние &quot;стаканов&quot; по выбранному рынку.
+Заявки отсортированы в порядке возрастания цены для продажи и убывания цены для покупки.</p>
+
+<ul>
+<li>требуемый уровень доступа: <strong>публичный</strong></li>
+</ul>
+<h4 id='http-request-2'>HTTP Request</h4>
+<p><code>GET https://{stage_address}/api/v2/depth</code></p>
+<h3 id='6744ad4c7a-2'>Параметры</h3>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Обязательный</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>market</strong></td>
+<td>да</td>
+<td>ID рынка</td>
+</tr>
+</tbody></table>
